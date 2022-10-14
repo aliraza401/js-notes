@@ -42,16 +42,18 @@ Constraints:
 /**
  * @param {number[]} nums
  * @return {number}
- * BigO O(n)
  */
 var pivotIndex = function (nums) {
-  const getSum = (arr) => arr.reduce((a, b) => a + b, 0);
+  const totalSum = nums.reduce((a, b) => a + b, 0);
+  let leftSum = 0;
 
-  for (let index = 0; index < nums.length - 1; index++) {
-    if (getSum(nums.slice(0, index)) === getSum(nums.slice(index + 1))) {
-      return index;
+  for (let i = 0; i < nums.length; i++) {
+    if (leftSum === totalSum - nums[i] - leftSum) {
+      return i;
     }
+    leftSum += nums[i];
   }
-
   return -1;
 };
+
+console.log(pivotIndex([1, 7, 3, 6, 5, 6]));
