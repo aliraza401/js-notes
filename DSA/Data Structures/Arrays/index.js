@@ -7,7 +7,7 @@ const Zombie = {
   gender: "Female",
 
   eatBrain: () => {
-    console.log("eathig brain", this);
+    console.log("Eat brain", this);
   },
 };
 
