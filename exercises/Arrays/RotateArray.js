@@ -21,24 +21,33 @@ rotate 2 steps to the right: [3,99,-1,-100]
 */
 
 /**
+ * @param {number[]} arr
+ * @return {number[]}
+ * BigO {O(n)}
+ */
+const rotateCycle = function (arr) {
+  const nums = arr;
+
+  const lastEle = nums[nums.length - 1];
+  for (let index = nums.length - 1; index > 0; index--) {
+    nums[index] = nums[index - 1];
+  }
+  nums[0] = lastEle;
+  return nums;
+};
+
+/**
  * @param {number[]} nums
  * @param {number} k
  * @return {number[]}
  * BigO {O(n)}
  */
-var rotateArray = function (nums, k) {
-  let arr = nums;
-  for (let i = 0; i < k; i++) {
-    const lastEle = arr[arr.length - 1];
-    for (let index = 0; arr.length - 1; index++) {
-      arr[index + 1] = arr[index];
-    }
-    arr[0] = lastEle;
+const rotateArray = function (arr, k) {
+  let newArr = arr;
+  for (index = 0; index < k; index++) {
+    newArr = rotateCycle(newArr);
   }
-
-  console.log(arr);
-  return arr;
+  return newArr;
 };
 
-rotateArray([1, 2, 3, 4], 1);
-// console.log();
+rotateArray([1, 2, 3, 4], 7);
