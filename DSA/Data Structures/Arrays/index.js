@@ -1,14 +1,18 @@
-/* Array
-
+/* 
+  Array
 */
 
 const Zombie = {
   name: "Hania",
   gender: "Female",
 
-  eatBrain: () => {
-    console.log("Eat brain", this);
+  eatBrain: function () {
+    console.log("Eat brain", this.name);
   },
+
 };
 
-Zombie.eatBrain();
+// console.log([...Zombie]);
+const abc = Object.assign({}, Zombie);
+
+abc.eatBrain();

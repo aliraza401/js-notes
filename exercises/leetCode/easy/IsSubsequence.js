@@ -23,16 +23,16 @@ s and t consist only of lowercase English letters.
  * @param {string} t
  * @return {boolean}
  */
-var isSubsequence = function (s, t) {
+const isSubsequence = function (s, t) {
   if (s.length === 0) return true;
   if (s.length !== 0 && t.length === 0) return false;
 
   let matchedIndex = 0;
-  for (let index = 0; index < t.length; index++) {
-    if (t[index] === s[matchedIndex]) {
-      matchedIndex++;
-    }
+  for (let index = 0; index < t.length; index++) { 
+    if (t[index] === s[matchedIndex]) matchedIndex++;
   }
 
   return matchedIndex === s.length;
 };
+
+console.log(isSubsequence("axc", "ahbgdc"))
