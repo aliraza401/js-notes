@@ -1,5 +1,3 @@
 /*
     Hash Table
-
-    
 */

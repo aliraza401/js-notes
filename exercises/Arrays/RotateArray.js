@@ -25,7 +25,7 @@ rotate 2 steps to the right: [3,99,-1,-100]
  * @return {number[]}
  * BigO {O(n)}
  */
-const rotateCycle = function (arr) {
+const rotateCycle = (arr) => {
   const nums = arr;
 
   const lastEle = nums[nums.length - 1];
@@ -42,7 +42,7 @@ const rotateCycle = function (arr) {
  * @return {number[]}
  * BigO {O(n)}
  */
-const rotateArray = function (arr, k) {
+const rotateArray = (arr, k) => {
   let newArr = arr;
   for (index = 0; index < k; index++) {
     newArr = rotateCycle(newArr);
