@@ -1,0 +1,71 @@
+/* BEM and atomic css::
+    BEM stands for block element model. naming conventon of css classes. consistint and dont confilict.
+    block in main thing. Element is internal parts of block and modifier is something changes styles.
+    .block__element--modifier
+
+    Atomic => one class for one thing. (tailwind) (dry but not dry)
+    1 rule for 1 style
+    d-flex bg-primary align-items-center
+*/
+
+/* Universal sector::  
+    Select any type of elements.
+    Selects all elements.
+    * {
+        color: green; color of all the elements should be green 
+    }
+*/
+
+/* class vs id:: 
+    Unlike JS we can apply style to multiple elements in using id. 
+    style applid to ID has higher order.
+*/
+
+/* Responsive web design:: 
+    Approach of creating using flexible images, layouts and css media queries.
+*/
+
+/* Box Modal::
+    elelents:: content, padding, margin, border.
+*/
+
+/* Box Sizing */
+
+/* CSS selectors */
+
+/* Specificity */
+
+/* position */
+
+/* Pseudo Selectors::  
+    add special effect to elelments.
+    like before, after, hover, first child, last child
+*/
+
+/* Z-index :: 
+    stack order of the elements that overlaps each other.
+*/
+
+/* FlexBox */
+
+/* Grid */
+
+/* limitations */
+
+/* CSS Preprocessor */
+
+/* adaptive design vs responsive design */
+
+/* cascading in CSS */
+
+/* progressive rendering */
+
+/* mixins:: 
+    like a js function that returns styles. SCSS. 
+*/
+
+/* optimize the webpage for prints */
+
+/* float :: 
+    used to change of image left and right as needed.
+*/

@@ -11,6 +11,15 @@ Output: [1,3,12,0,0]
 Example 2:
 Input: nums = [0]
 Output: [0]
+
+  [0,1,0,3,12]
+
+  [0,1,0,3,12]
+  [1,1,0,3,12]
+  [1,0,0,3,12]
+  [1,0,3,3,12]
+  [1,0,3,12,12]
+  [1,0,3,12,0]
 */
 
 /**
@@ -19,22 +28,13 @@ Output: [0]
  * O(n^2)
  */
 const moveZeros = (nums) => {
-  let zerosCount = 0;
-  for (let i = 0; i < nums.length; i++) {
-    if (nums[i] === 0) {
-      zerosCount++;
-      for (let j = i; j < nums.length - 1; j++) {
-        nums[j] = nums[j + 1];
-      }
+  for (let index = 0; index < nums.length - 1; index++) {
+    if (nums[index] === 0) {
+      nums.splice(index, 1);
+      nums.push(0);
     }
   }
-  for (let i = nums.length - 1; true; i--) {
-    if (zerosCount === 0) break;
-    zerosCount--;
-    nums[i] = 0;
-  } 
-  console.log( zerosCount, nums);
+  return nums;
 };
 
-const nums = [0,1,0];
-moveZeros(nums);
+moveZeros([0, 1, 0, 3, 12]);

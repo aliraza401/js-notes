@@ -32,11 +32,9 @@ const findMissing = (arr) => {
  */
 const findMissingTwo = (arr) => {
   for (let index = 1; index < arr.length; index++) {
-    if (arr.indexOf(index) === -1) {
-      return index;
-    }
+    if (arr.indexOf(index) === -1) return index;
   }
   return -1;
 };
 
-console.log(findMissingTwo([5, 4, 3, 2]));
+console.log(findMissingTwo([1, 2, 3, 4, 6, 7]));
