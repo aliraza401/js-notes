@@ -2,7 +2,7 @@
 // Netscape, 1995, 10 days, Erbandan Eich
 
 // Define:: 
-// Client side scripting, synchronous, dynamically typed, made to bring Web pages to life.
+// Client side scripting, synchronous, dynamically typed, made web pages interactive.
 
 // DataTypes::
 // Premitive:
@@ -26,17 +26,23 @@ var sum = (a, b) => a + b;                  // function
 // arguments:: 
 // array-like object accessible inside functions that contains the values of the arguments passed to that function.
 
+// Versions of JS:
+// The Original JavaScript ES1 ES2 ES3 (1997-1999)
+// The First Main Revision ES5 (2009)
+// The Second Revision ES6 (2015)
+// All Yearly Additions (2016, 2017, 2018, 2019, 2020)
+
 // Spread/Rest::
 // spread array or object to single items.
 console.log(...[1, 2, 3, 4]);
 // rest is use to get rest of parameters.
 
 // Main Features in VS6:
-// let const, arrow functions, promise, De-structuring.
+// let, const, arrow functions, promise, De-structuring.
 
 // var vs let vs const:: 
 // var is function scope. let and const are block scope.
-// On global scope init variable with var  will bind object to window object.
+// On global scope init variable with var will bind object to window object.
 // We cannot access let and const before init(Temporal Dead Zone) but we can access var before init.
 
 // scope::
@@ -66,7 +72,7 @@ console.log(...[1, 2, 3, 4]);
 
 // window vs document::
 // window is the execution context and global object for that context's JavaScript
-// document contains the DOM, initialized by parsing HTML
+// document contains the DOM, initialized by parsing HTML.
 
 // Function::
 // Block of code designed to perform a particular task.
@@ -91,9 +97,9 @@ let def = function abc() { }  //abc() is only accessible in b.
 
 // Pure functions::
 // specific task 
-// always returns same value against same input. 
+// always returns same value against same input.
 // NOT depends on function outside its scope.
-// NOT change anything outside.
+// No side effects.
 
 // Callback::
 // A callback function is passed into another function as an argument, which is then invoked in context the passed function.
@@ -105,8 +111,8 @@ setTimeout(() => console.log('I am callback inside timeout'), 2000);
 // Object representing a eventual completion or failure of async operation.
 // are used to handle async operations in js.
 // No inversion of controll.
-const promise = new Promise((resolve, reject)=> {
-    if(1 === 1) resolve(1);
+const promise = new Promise((resolve, reject) => {
+    if (1 === 1) resolve(1);
     reject(new Error('1 is nor 1'));
 });
 
@@ -120,7 +126,7 @@ const promise = new Promise((resolve, reject)=> {
 
 // Freeze Object:: (Imuatible objects)
 // By default objects are muatible but we can make them Imuatible.
-const obj = { name: "Ali", age: 23, job: { salary: 10, type: 'DEV' } };
+const obj = { name: "Ali", age: 23, job: { role: 'Author', type: 'DEV' } };
 Object.seal(obj); // No add remove properties.
 Object.freeze(obj); // No add remove update properties.
 // Object.defineProperties(obj, 'age', { writable: false }); //Make single property imuatible.
@@ -153,16 +159,12 @@ set.add('three');
 // Promise chainging
 new Promise(function (resolve, reject) {
     setTimeout(() => resolve(1), 10000);
-}).then(function (result) {
-    console.log(result);
-    return result * 2;
-}).then(function (result) {
-    console.log(result);
-    return result * 2;
-}).then(function (result) {
-    console.log(result);
-    return result * 2;
-});
+}).then((result) => result * 2)
+    .then(function (result) {
+        return result * 2;
+    }).then(function (result) {
+        return result * 2;
+    });
 
 // Naming convention for variables and functions::
 // camelCase => variables (except for constants), fuctions, module exports.
@@ -172,3 +174,43 @@ new Promise(function (resolve, reject) {
 // Writing comment:: (jsdoc)
 
 // Error handling::
+// We throw error and catch errors.
+// We can also chain try catch.
+try {
+    throw new Error('Opps new err');
+    new SyntaxError();
+    new ReferenceError();
+} catch (err) {
+    console.log('Err :: ', err.name);
+    console.log('Err :: ', err.message);
+    console.log('Err :: ', err.stack);
+} finally {
+    console.log('Still good');
+}
+
+Promise.resolve(5 + 8)
+    .then(resp => resp.toString())
+    .then(resp => {
+        console.log(resp);
+        Promise.resolve('Hello')
+            .then(resp => { throw new Error('Inner Err') })
+            .catch(err => console.log(err.message));
+        throw new Error('Err')
+    })
+    .catch(err => console.log(err.message));
+
+(async function () {
+    try { await Promise.reject('# Err 1'); }
+    catch (err) { console.log(err); }
+})()
+
+class DatabaseError extends Error {
+    constructor(message, DbProperty) {
+        super(message);
+        this.property = DbProperty;
+    }
+}
+const dbError = new DatabaseError('DB error', 'User ID not found in Table');
+console.log(dbError);
+
+// Loops::

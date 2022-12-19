@@ -1,19 +1,23 @@
 Introduce::
 As you know my name is Ali Raza.
-I have development expericence of about 2 years.I am in frount-end development. 
-Mostly have worked with ReactJS. but working with angular, vue or any other framework is 
-     not issue becasue i thick of my self as javascript-frontend engineer. I can work with anything in this domain.
+I have 2 years of experience in software development.Specfically in frount-end development.React development.
+Currently i am working in convo as Frontend Software engineer. In convo i am working on react generic/reuseable components library. 
+I have completed Bachelor in Software engineering degree but i started development at age 17.
+I think of my self as javascript-frontend engineer. I can work with anything in this domain. (Vue or Angular).
 
-I have completed Bachelor in Software engineering degree but i started development at age 17 as a hobby 
-     and started at professional development from age of 19 as a passion.
+Why you want to switch::
+well I like working model of remotebase. Its remote and devs get to work for silicon valley compnies or top compnies. I really admire your company culture.
 
+Working::
+     2 weeks sprints.
+     Agile/Scurm.
+     story points features at start of sprint.
+
+Code reviews::
+     Yes, firstly new dev branch is made for every feature/bug by every developer1. When code merged pr is created and reviewed by Team Lead.
 
 What do you like::
 What i like is Javscript, implementing logics, making UI designs, code optimizations, change code structure.
-
-Testing::
-Never had a chance to write tests for apps. Usually menual QA guys do that for us.
-If given chance i will love to work in this domain.
 
 Project:: (role, tech, features)
 My farioute one is Audio Playgound. It was like copy of sound-cloud with some social features. payment, subscrition.

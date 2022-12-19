@@ -92,8 +92,10 @@ bs.postMessage("Yo man");
 const parent = document.createElement('div');
 parent.appendChild('Appending Text');  // Cause error in appendChild().
 
-// cors::
+// CORS::
 
 // http methods::
 
 // http methods status::
+
+// Web security::

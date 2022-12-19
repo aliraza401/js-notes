@@ -5,7 +5,7 @@
 // e.g:
 const Zombie = {
   age: 453,
-  eatBrain() {
+  eatBrain() {free
     console.log("Eating brain", this);
     const digest = () => console.log("Digesting ", this);
     digest();
@@ -97,7 +97,7 @@ deepPerson2.job.title = 'Soldier'; // Changes property of original object.
 const deepPerson3 = JSON.parse(JSON.stringify(person)); // works for nested objects but mess-up methods.
 // _.deepClone(person); // Use this lodash method for proper deep cloning.
 
-// event bubbling and event capturing: (first capture then bubble)
+// Event life-cycle:: bubbling and event capturing: (first capture then bubble)
 // process of propagating from the closest element to the farthest away element in the DOM is called event bubbling.
 document.addEventListener("click", e => console.log("Document bubbling"));
 // process of propagating from the farthest element to the closest element in the DOM is called event capturing.
@@ -157,3 +157,4 @@ localStorage.removeItem('user');
 // lazy-load components.
 // Use lighthouse. 
 
+// Await in loop:: 

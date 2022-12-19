@@ -1,9 +1,13 @@
 // React::
-// React is a JavaScript library for building user interfaces.
+// React is a open-source front-end JavaScript library for building user interfaces.
+// for SPAs by Facebook.
 // Declarative (abstract away the control flow for logic, not tell step by step).
+
+// Features of React::
 // Reusable components based approach.
 // single-directional flow of data. (Only transfer data from parent to child not vice-versa) (state -> component -> DOM)
 // most of market share.
+// VirtualDOM instead of RealDOM. 
 
 // Virtual DOM advantages::
 // VDOM is a programming concept where virtual representation of a UI is kept in memory and is synced with the real DOM.
@@ -15,11 +19,17 @@
 
 // JSX:
 // Javascript XML. HTML like syntax that is used in react.
+// syntactic sugar for the React.createElement().
+
+// React Create Element::
+const element = React.createElement('div', { id: 'login-btn' }, 'Login'); // <div id='login-btn'>Login</div>
+const domEle = document.createElement('img');
+domEle.src = `https://www.firstbenefits.org/wp-content/uploads/2017/10/placeholder-1024x1024.png`;
 
 // State: (local data of components)
 // source of data that control aspects component behavior and rendering. mutable, upon change changes UI.
 
-//  Props: (pass data from one component)
+//  Props: (Input to component)
 //  properties, that components get in parameter. immutable(you can't change props directly in components)
 
 //  Higher order component:
@@ -45,6 +55,11 @@ const newComponent = higherOrderComponent(orignalComponent);
 
 // Pure components::
 // renders the same output for the same state and props.
+// React.PureComponent:
+// React.PureComponent is exactly the same as React.Component except that it handles the shouldComponentUpdate() 
+// method for you. When props or state changes, PureComponent will do a shallow comparison on both props and state. 
+// Component on the other hand won't compare current props and state to next out of the box. Thus, the component will 
+// re-render by default whenever shouldComponentUpdate is called.
 
 // production mode::
 // process.env.NODE_ENV=production
@@ -55,6 +70,11 @@ const newComponent = higherOrderComponent(orignalComponent);
 
 // React Fiber:
 // New state reconcliation engine introduced in react 16.
+
+// "key" prop::
+// A key is a special string attribute you should include when creating arrays of elements. Key prop helps React 
+// identify which items have changed, are added, or are removed.
+// Using indexes for keys is not recommended if the order of items may change. This can negatively impact performance and may cause issues with component state.
 
 // Hooks::
 // starts with name use.
@@ -125,9 +145,6 @@ React.userLayoutEffect(() => console.log('HEllo, I will execute before actual po
 
 // getDetivedStatefromProps::
 
-// Suspence::
-<React.Suspense fallback={"loading..."}><About /></React.Suspense>
-
 // Lazyload::
 // incremental downloading. 
 // code/compoents not required in specfic page can be lazy-loaded.
@@ -152,3 +169,5 @@ const about = React.lazy(() => import('./componenets/about'));
 // for function compoents maybe make hook.
 
 // Hot reloading vs live reloafing::
+
+// Error Boundaries::
