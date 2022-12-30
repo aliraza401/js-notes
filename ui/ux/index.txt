@@ -1,0 +1,6 @@
+UI::
+
+UX::   
+    user experience. anhancing user satisfication by improving usibility, assecibility and interaction with product.
+HCI::
+    human computer interaction.

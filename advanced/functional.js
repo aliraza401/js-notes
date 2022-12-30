@@ -67,6 +67,42 @@ console.log(multipyBy3makePositive(-50));
 // Like compose but moves from left to right.
 const pipe = (f, g) => (data) => g(f(data));
 
-// Arity: 
+// Arity:
 // number of arguments a function takes.
 // In FP there is concept the fewer number of auguments a function takes the better that function is.
+
+// Example of FP:
+const user = {
+  name: "Kim",
+  active: true,
+  cart: [],
+  purchases: [],
+};
+
+const purchaseItem = (...fns) => fns.reduce((f, g) => (...args) => g(f(...args))); //pipe function
+
+purchaseItem2(
+  addItemToCart,
+  applyTaxToItems,
+  buyItem,
+  emptyUserCart
+)(user, { name: "laptop", price: 60 });
+
+const addItemToCart = (user, item) => Object.assign({}, user, { cart: user.cart.concat(item) });
+
+const applyTaxToItems = (user) => {
+  const { cart } = user;
+  const taxRate = 1.3;
+  const updatedCart = cart.map((item) => {
+    return {
+      name: item.name,
+      price: item.price * taxRate,
+    };
+  });
+  return Object.assign({}, user, { cart: updatedCart });
+}
+
+const buyItem = (user) =>Object.assign({}, user, { purchases: user.cart });
+
+const emptyUserCart = (user) => Object.assign({}, user, { cart: [] });
+
