@@ -1,8 +1,8 @@
 /* Skills Required
-1.Analytic Skills - How can you think through problems and analyze things.
-2.Coding Skills - Do you code well, by writing clean, simple, organized, readable code.
-3.Technical knowledge - Do you know the fundamentals of the job you're applying for.
-4.Communication skills: Does your personality match the companies’ culture.
+1. Analytic Skills - How can you think through problems and analyze things.
+2. Coding Skills - Do you code well, by writing clean, simple, organized, readable code.
+3. Technical knowledge - Do you know the fundamentals of the job you're applying for.
+4. Communication skills: Does your personality match the companies’ culture.
 */
 
 /* Steps to solve problems

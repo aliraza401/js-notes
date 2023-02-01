@@ -2,10 +2,9 @@
 // Don't have their own bindings to this, arguments or super.
 // Gets THIS of their nearest obj.This keyword is inherited from the surrounding scope.
 // changed syntax.
-// e.g:
 const Zombie = {
   age: 453,
-  eatBrain() {free
+  eatBrain() {
     console.log("Eating brain", this);
     const digest = () => console.log("Digesting ", this);
     digest();
@@ -16,7 +15,7 @@ Zombie.eatBrain();
 Zombie.sleep(); // prints undefined.
 
 // When not to use Arrow Function::
-// event handlers, objects methods, constructors, prototypes, function that use arguments object, generator function.
+// event handlers, objects methods, constructors, prototypes, function that use arguments object.
 
 // shadowing::
 // when a variable declared in a certain scope (e.g. a local variable)
@@ -45,18 +44,18 @@ console.log(c); //10
 // For let/const we Cannot access before initialization. For var its gives undefined.
 
 // Garbage Collector::
-// tries to free space whenever possible. Auto. use Mark & Sweep algo(V8).
+// Tries to free space whenever possible. Auto. use Mark & Sweep algo(V8).
 // Removes variables from heap when they are not further in use.
 
 // Reasons for memory leeks::
-//  Global variables, Event Listers, setInterval.
+// Global variables, Event Listers, setInterval.
 
 // call stack and heap::
 // Heap: to store data. All memory allocation happens. 
 // stack: where code is in its execution.
 
 // Disadvantages of blocking main thread in javascript::
-// JavaScript Concurrency Model
+// JavaScript Concurrency Model.
 // If you block main thread callback queue and micro-queue will never executed.
 
 // Debouncing vs Throttling: (limiting a rate of function call)
@@ -90,7 +89,7 @@ const shallowPerson = person;
 const shallowPersonTwo = person;
 person.name = 'Raza';
 console.log(person);
-// In deep copy all properties are copied ro new location and allocated new memory space. changing copird wont effect any other.
+// In deep copy all properties are copied ro new location and allocated new memory space. changing copied wont effect any other.
 const deepPerson1 = Object.assign({}, person);
 const deepPerson2 = { ...person };
 deepPerson2.job.title = 'Soldier'; // Changes property of original object.
@@ -140,7 +139,7 @@ localStorage.removeItem('user');
 // Optimization::
 // lossless compress assets and move them to CDN.
 // use properly sized images. lazy load images.
-// minify code. (Tree shalighthouseking)
+// minify code. (Tree shaking)
 // Reconsider app build size. react-analyze.
 // use css image stripes. 
 // Enable browser caching.

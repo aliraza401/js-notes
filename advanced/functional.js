@@ -46,7 +46,6 @@ const getCubeMemo = () => {
     return result;
   };
 };
-
 const getCube = getCubeMemo();
 console.log(getCube(5));
 console.log(getCube(5));

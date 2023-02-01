@@ -76,4 +76,4 @@ console.log(gandaf.attack());
 // Issues with oop:: (Focus on that it is)
 // 1. Tight coupling. (changing method might disturb derived classes.)
 // 2. Gourila banana problem.
-// 3. FOr future we assume this will remain same. 
+// 3. For future we assume this will remain same. 

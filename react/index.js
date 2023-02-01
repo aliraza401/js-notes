@@ -1,7 +1,7 @@
 // React::
 // React is a open-source front-end JavaScript library for building user interfaces.
 // for SPAs by Facebook.
-// Declarative (abstract away the control flow for logic, not tell step by step).
+// Declarative (abstract way the control flow for logic, not tell step by step).
 
 // Features of React::
 // Reusable components based approach.
@@ -168,6 +168,39 @@ const about = React.lazy(() => import('./componenets/about'));
 // for class components there is method of .forceUpdate().
 // for function compoents maybe make hook.
 
-// Hot reloading vs live reloafing::
+// Hot reloading vs live reloading::
 
 // Error Boundaries::
+
+// class vs function::
+
+// useRef vs createRef:
+
+// REDUX
+
+// Redux::
+// JS library for managing state of library. Global State.
+
+// Components::
+// store, actions, and reducers.
+
+// Store::
+// object that holds the state of the application and allows it to be accessed anywhere.
+
+// Action:: 
+// Method that describes the change in state.
+
+// Reducer in redux::
+
+// Dispatch::
+// function used to send actions to the store.
+
+// Subscribe function::
+// Redux allows components to be notified of changes to the state and re-render as necessary.
+
+// Aynchronous actions::
+// redux-thunk or redux-saga
+
+// middleware::
+// allows you to intercept and handle actions.
+// Used for tasks such as logging, handling async actions, or performing side effects.

@@ -2,7 +2,7 @@
 // Netscape, 1995, 10 days, Erbandan Eich
 
 // Define:: 
-// Client side scripting, synchronous, dynamically typed, made web pages interactive.
+// Client side, scripting, synchronous, dynamically typed, made web pages interactive.
 
 // DataTypes::
 // Premitive:
@@ -71,7 +71,7 @@ console.log(...[1, 2, 3, 4]);
 // equality(by value) vs strict equality(by type and value).
 
 // window vs document::
-// window is the execution context and global object for that context's JavaScript
+// window is the execution context and global object for that context's JavaScript.
 // document contains the DOM, initialized by parsing HTML.
 
 // Function::
@@ -81,7 +81,7 @@ console.log(...[1, 2, 3, 4]);
 function a() { }
 
 // Function expression:: (hoisted as variable)
-let abc = function () { }
+const abc = function () { }
 
 // Anonymous Functions:: (function without name)
 // function() {} 
@@ -96,21 +96,21 @@ let def = function abc() { }  //abc() is only accessible in b.
 // A function which takes a function as a input or returns function in output.
 
 // Pure functions::
-// specific task 
-// always returns same value against same input.
+// specific task.
+// Always returns same value against same input.
 // NOT depends on function outside its scope.
 // No side effects.
 
 // Callback::
 // A callback function is passed into another function as an argument, which is then invoked in context the passed function.
-// 1. callback hell (When some piece of code depends on other)
+// 1. callback hell (When some piece of code depends on other).
 // 2. Inversion of control. (when code is called in context anther then we lose contol of our code).
 setTimeout(() => console.log('I am callback inside timeout'), 2000);
 
 // Promises::
 // Object representing a eventual completion or failure of async operation.
 // are used to handle async operations in js.
-// No inversion of controll.
+// No inversion of control.
 const promise = new Promise((resolve, reject) => {
     if (1 === 1) resolve(1);
     reject(new Error('1 is nor 1'));
@@ -130,9 +130,10 @@ const obj = { name: "Ali", age: 23, job: { role: 'Author', type: 'DEV' } };
 Object.seal(obj); // No add remove properties.
 Object.freeze(obj); // No add remove update properties.
 // Object.defineProperties(obj, 'age', { writable: false }); //Make single property imuatible.
-obj.job.type = "Soldier"; // this in imuatible even in case of Freeze.
+obj.job.type = "Soldier"; // this in imuatible even in case of Freeze. We have to explicility freeze all objects. 
+Object.freeze(obj.job);
 
-// sort function::
+// Sort function::
 // By default sort them in assending order UTF-16.
 // Compare function
 [10, 2, 3, 3, 7, 1, 3].sort((a, b) => {
@@ -145,10 +146,10 @@ obj.job.type = "Soldier"; // this in imuatible even in case of Freeze.
 // set and map::
 // Map => collection of keyed data items, just like an Object. But allows keys of any type.
 let map = new Map();
-map.set('1', 'str1');   // a string key
-map.set(1, 'num1');     // a numeric key
-map.set(true, 'bool1'); // a boolean key
-map.set({ a: 12 }, 'Object for AA.'); // a object key
+map.set("1", "str1"); // a string key
+map.set(1, "num1"); // a numeric key
+map.set(true, "bool1"); // a boolean key
+map.set({ a: 12 }, "Object for AA."); // a object key
 console.log(map);
 // Set => like array but unique.
 let set = new Set();
@@ -213,4 +214,5 @@ class DatabaseError extends Error {
 const dbError = new DatabaseError('DB error', 'User ID not found in Table');
 console.log(dbError);
 
-// Loops::
+
+// Pub Sub

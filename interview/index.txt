@@ -1,16 +1,28 @@
 Introduce::
-As you know my name is Ali Raza.
-I have 2 years of experience in software development.Specfically in frount-end development.React development.
-Currently i am working in convo as Frontend Software engineer. In convo i am working on react generic/reuseable components library. 
-I have completed Bachelor in Software engineering degree but i started development at age 17.
-I think of my self as javascript-frontend engineer. I can work with anything in this domain. (Vue or Angular).
+As you know already my name is Ali Raza.
+I have about 2.5 years of experience in professional development and even done some freelancing before that for about i guess 5-6 months.
+Currently i am working in convo as Software engineer - Frontend foused. My current role is to make calling app for convo like meets.
+I like working with Javscript, implementing logics, making UI designs, code optimizations, improving code structure.
 
-Why you want to switch::
-well I like working model of remotebase. Its remote and devs get to work for silicon valley compnies or top compnies. I really admire your company culture.
+hows you day:
+
+hows you week:
+
+Tech Stack::
+    Language => Javascript, Typescript, HTML5/CSS3.
+    Frameworks => React, Next(SEO time and complete solution).
+    Design systems => MUI, Tailwind.
+    State management => Redux, zustand + context api.
+    build pack => webpack and grunt. monorepo => turborepo.
+    Libraries => React Query, Framer motion.
+
+Why leaving::
+     My current company is going in maintainance mode means we will not be releasing new features insted working on current improvements/bug fixes.
+     I have worked here for about 1.5 year. I know i will get comfortable so i dont think i will enjoy working in maintainance mode.
 
 Working::
-     2 weeks sprints.
      Agile/Scurm.
+     2 weeks sprints.
      story points features at start of sprint.
 
 Code reviews::
@@ -24,3 +36,6 @@ My farioute one is Audio Playgound. It was like copy of sound-cloud with some so
 Agile/Scurm.
 story points features at start of sprint.
 1 front-end 2 back-end. Project lead(CTO) and one QA guy.
+
+conclude:
+I am excited to be a part of a team where I can continue to learn and grow as a developer while contributing to the success of the projects I work on.

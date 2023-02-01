@@ -22,6 +22,9 @@ Constraints:
 s consists of parentheses only '()[]{}'.
 */
 
+const isValidStack = (index, indexNext, bracketStart, bracketEnd) =>
+  index !== bracketStart && indexNext === bracketEnd;
+
 /**
  * @param {string} s
  * @return {boolean}
@@ -37,9 +40,9 @@ var isValid = function (s) {
     } else if (closingBrackets.includes(s[i])) {
       const currentStackItem = bracketsStack[bracketsStack.length - 1];
       if (
-        (currentStackItem !== "[" && s[i] === "]") ||
-        (currentStackItem !== "{" && s[i] === "}") ||
-        (currentStackItem !== "(" && s[i] === ")")
+        isValidStack(currentStackItem, s[i], "[", "]") ||
+        isValidStack(currentStackItem, s[i], "{", "}") ||
+        isValidStack(currentStackItem, s[i], "(", ")")
       ) {
         return false;
       } else {
@@ -49,3 +52,6 @@ var isValid = function (s) {
   }
   return bracketsStack.length ? false : true;
 };
+
+
+console.log(isValid('()[]{}'));

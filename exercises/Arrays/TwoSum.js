@@ -34,11 +34,9 @@ const twoSum = (nums, target) => {
  * BigO : O(n)
  */
 const twoSumSecond = (nums, target) => {
-  for (let i = 0; i < nums.length; i++) {
-    const diff = target - nums[i];
-    const diffIndex = nums.indexOf(diff);
-    if (diffIndex !== -1 && diffIndex !== i) {
-      return [i, diffIndex];
+  for(let index = 0; index < nums.length; nums++) {
+    if (target - nums[index] in nums) {
+      return [index, nums[index]];
     }
   }
 };

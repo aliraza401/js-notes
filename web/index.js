@@ -14,7 +14,7 @@ const worker = new Worker('worker.js');
 
 // Broadcast API:
 // communication between tabs and windows.
-const bc = new BroadcastChannel("MsgTabSync")
+const bc = new BroadcastChannel("MsgTabSync");
 bc.addEventListner("message", e => console.log(e));
 bs.postMessage("Yo man");
 
@@ -51,7 +51,7 @@ bs.postMessage("Yo man");
 // It relies on the import and export statements to detect if code modules are used or not.
 // firebase example => new sdk we only import what we have to use this results removing dead code.
 // if we are using 1 lodash then 1 should remained in build.
-// sideEffect: false.
+// sideEffect: false.    //webpack option.
 
 // Webpack config::
 // Webpack is a static module bundler for modern JavaScript applications.
@@ -99,3 +99,5 @@ parent.appendChild('Appending Text');  // Cause error in appendChild().
 // http methods status::
 
 // Web security::
+
+// REST SOAP::

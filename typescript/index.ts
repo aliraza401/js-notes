@@ -44,8 +44,8 @@ class Person implements UserType {
     this.age = age;
   }
 
-  getAge() {
-    return this.age;
+  getAge(): number {
+    return this.age || 0;
   }
 }
 
