@@ -1,4 +1,10 @@
-//  separtion of concerns. DATA and FUNCTIONS.
+// What is functional programming?
+// Style of programming that emphasizes the use of functions as the primary building blocks of code. 
+// It relies on functions which take one or more inputs and return an output without modifying external state.
+
+// separtion of concerns. DATA and FUNCTIONS.
+// data and methods are different.
+// give data take result.
 // RAMDA js library.
 
 // PURE FUNCTIONS => no side effects(not 100%), same input same output.
@@ -25,13 +31,16 @@ const getPI = () => 3.14;
 // Dont update original DS make copy make changes and return new object.
 
 // HOF::
+const sum = (a, b) => a + b;
+const avg = (sum) => () => sum / 2;
+avg(sum(12, 23))();
 
 // Closure::
 
 // Currying::
 // technique of a function that takes multiple args into multiple functions that takes single args each.
 const multiply = (a, b) => a * b;
-const curriedMultiply = (a) => (b) => a * b;
+const curriedMultiply = (a) => (b) => a * b; //HOF
 const curriedMultiplyBy5 = curriedMultiply(5);
 console.log(curriedMultiply(5)(3));
 console.log(curriedMultiplyBy5(3));

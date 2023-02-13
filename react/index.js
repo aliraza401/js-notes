@@ -13,6 +13,17 @@
 // VDOM is a programming concept where virtual representation of a UI is kept in memory and is synced with the real DOM.
 // fast as compared to actual DOM, minimal memory consumption.
 
+// Transformer:
+// Babel
+
+// React component life cycle:
+
+// Component:
+// Reusable piece of code that encapsulates markup and logic for a particular part of the user interface.
+
+// compoenent vs element:
+// Elements are the basic building blocks in React, while Components are pieces of code that control the Elements and allow for more complex React applications.
+
 // Reconciliation::
 // The process of syncing virtual dom with real dom.
 // You tell React what state you want the UI to be in, and it makes sure the DOM matches that state.
@@ -41,7 +52,7 @@ const newComponent = higherOrderComponent(orignalComponent);
 //  Action -> Reducer -> State -> UI
 
 // Advantages of using redux::
-// organized approach, testing ability, dev tools
+// organized approach, testing ability, dev tools.
 
 //  Phases of react component life cycle::
 //  Initial => Update => Unmount.
@@ -66,7 +77,7 @@ const newComponent = higherOrderComponent(orignalComponent);
 // auto-swith to production in build and development in start.
 
 // cloneElement vs createElement::
-// create element is to completely create new element and clone element to clone element and pass new prop.
+// create element is to completely create new element and clone element to and pass new prop.
 
 // React Fiber:
 // New state reconcliation engine introduced in react 16.
@@ -176,12 +187,24 @@ const about = React.lazy(() => import('./componenets/about'));
 
 // useRef vs createRef:
 
+// Make Custom hook:
+
+// Headless comonents:
+// solely written as "pure" JavaScript functions and do not have any render method declared. 
+// This means you will never see them created when the component is rendered, and they could never be "mounted" on the DOM.
+
 // REDUX
 
 // Redux::
 // JS library for managing state of library. Global State.
 
-// Components::
+// Flow of redux:
+// Action => Reducer => Store => UI
+
+// multiple reducer:
+// Yes.
+
+// Components:: 
 // store, actions, and reducers.
 
 // Store::
@@ -191,6 +214,7 @@ const about = React.lazy(() => import('./componenets/about'));
 // Method that describes the change in state.
 
 // Reducer in redux::
+// Redux is a function that takes the current state and an action and returns a new state. It updates the state based on the type of the action received.
 
 // Dispatch::
 // function used to send actions to the store.
@@ -201,6 +225,91 @@ const about = React.lazy(() => import('./componenets/about'));
 // Aynchronous actions::
 // redux-thunk or redux-saga
 
-// middleware::
-// allows you to intercept and handle actions.
+// Middleware::
+// Allows you to intercept and handle actions.
 // Used for tasks such as logging, handling async actions, or performing side effects.
+
+
+// Object.create vs Object.assign:
+
+// How browser works in detail:
+
+// REST:
+
+// Basic testing:
+
+// Flex vs GRID:
+
+// Design patterns for react:  (MVC, SOLID -> render props, HOF)
+// 1. Layout components:
+//  - Components should not care about where they are displayed. Generic components.
+const ListMapper = ({items, propertyName, PropertyComponent, uniqueIdentiferKey}) =>  
+    items.map((item, index) => <PropertyComponent {...{[propertyName]: item}} key={item[uniqueIdentiferKey] || uuid()} />);
+
+
+// 2.Controlled/Uncontrolled:
+// a. Controlled: (we can get component behave in any way we want by passing right props)
+    // Manage their own state.
+    // predticable
+// b. Uncontrolled:
+    // Their parent manages its state for them.
+    // non-predticable
+
+
+// 3. Custom Hooks:
+export default function useCounter() {
+    const [counter, setCounter] = React.useState(0);
+    const increment = () => setCounter((prevCounter) => prevCounter + 1);
+    const decrement = () => setCounter((prevCounter) => prevCounter - 1);
+    const setCustomValue = (customValue) => setCounter(+customValue);
+    return { counter, increment, decrement, setCustomValue };
+}
+
+// 4.Functional Programming:
+// Data and funcnality is not coupled.
+// Minimize state change.
+// advantages:
+    // controlled compoenents.
+    // functional components.
+    // HOC.
+    // recursive components.
+    // parcitally applied components.
+    // components composition.
+
+
+// HOC:
+// component that return another component.
+// sharing behavour/logic between other components.
+// Add extra funcnality in our existing component.
+const PrintProps = (component) => {
+    return (props) => {
+        console.log(props);
+        return <component {...props} />
+    }
+}
+const Card = () => <Card {...props} />
+const NewFunc = (PrintProps(Card))
+// <NewFunc /> 
+
+const withUser = (Component, userId) => {
+    return (props) => {
+        const [user, setUser] = React.useState('');
+        React.useEffect(()=>{
+            fetch(`/api-url/${userId}`)
+            .then(resp => resp.json())
+            .then(data => setUser(data));
+        }, []);
+        return <Component {...props} user={user} />
+    }
+}
+const WithUser = withUser(User, '123');
+// <WithUser />
+
+
+
+
+
+
+
+
+

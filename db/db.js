@@ -6,6 +6,7 @@
 
 // SQL (Structured Query Language):
 // is a language used to manage data held in relational db.
+// mysql, postgres, mssql, sqlite
 
 // DB types:
 // RDBMS, ORDBMS, ORDBMS, Graph, cloud.
@@ -48,3 +49,56 @@
 
 // query optimization
 // Process of tweaking a query to make it run more efficiently. 
+
+
+
+
+
+
+
+
+// SQL QUERIES:
+// ___________
+
+// CREATE DATABASE test;
+
+// DROP DATABASE test;
+
+// CREATE TABLE customers (
+// 	   id int NOT NULL AUTO_INCREMENT,
+//     firstName VARCHAR(255),
+//     lastName VARCHAR(255),
+//     email VARCHAR(255),
+//     zipCode VARCHAR(255),
+//     PRIMARY KEY(id)
+// );
+
+// INSERT INTO customers (firstName, lastName, email, zipCode) VALUES ("Ali", "Raza", "ali@gmail.com", "46000");
+
+// UPDATE customers SET email = "new@gmail.com" WHERE id = 3;
+
+// DELETE FROM customers WHERE id = 2;
+
+// SELECT * FROM `customers`;
+// SELECT firstName FROM customers;
+// SELECT firstName, lastName FROM customers WHERE id=3;
+// SELECT firstName, lastName FROM customers ORDER BY zipCode DESC;
+// SELECT firstName, lastName FROM customers ORDER BY zipCode ASC;
+// SELECT DISTINCT zipCode FROM customers;
+// SELECT * FROM customers WHERE zipCode <= 5000;
+// SELECT * FROM customers WHERE zipCode BETWEEN 2000 AND 5000;
+// SELECT * FROM customers WHERE firstName LIKE 'a%';
+// SELECT * FROM customers WHERE firstName LIKE '%a%';
+// SELECT * FROM customers WHERE firstName NOT LIKE 'a%';
+// SELECT * FROM customers WHERE firstName in ('ali', 'munir');
+
+// CREATE INDEX Zindex ON customers(zipCode);
+// 
+
+// Operators:
+// = <> > < >= <= BETWEEN LIKE IN IS IS NOT AS
+
+
+
+
+

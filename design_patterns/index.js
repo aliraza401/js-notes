@@ -6,8 +6,15 @@
 // Singleton::
 // Object that can be created only once.
 // Share a single global instance throughout our application.
-// Singletons are classes which can be instantiated once, and can be accessed globally. 
+// Singletons are classes which can be instantiated once, and can be accessed globally.
 // This single instance can be shared throughout our application, which makes Singletons great for managing global state in an application.
+class Counter {
+  constructor() { this.count = 0; }
+  getCount() { return this.count; }
+  increment() { this.count++; }
+}
+const instance = new Counter();
+export default instance;
 
 // Prototype: (Clone)
 // inheretence from objects instead of class.
@@ -32,7 +39,30 @@
 
 // Observer::
 // subscribe to event that are emit by other object.
-// firebase events, express routes
+// defines a one-to-many relationship between objects so that when one object changes state, all its dependents are notified and updated automatically.
+// firebase events, Socket, Redux
+
+// Publisher-Subscriber::
+// event-based middleware system that supports distributed communications. Components communicate by publishing messages to one or more topics, or subscribing to receive messages from one or more topics.
 
 // Mediator::
 // e.g: middleware in express
+
+// SOLID:::
+// 1. Single Reponsibility
+// Every component/function/class should only have single responsibility.
+// Make hooks for userState and useRef.
+
+// 2. Open Close
+// open for extension and closed for modification.
+// Don't change internal of library code rather extend commponent.
+
+// 3. Losvok Substitution
+// Child should be able to do what parent is able to do.
+// child shold be able to take all props and pass into ....  <input {props} />
+
+// 4. interface Segregation
+// Component shouldnot depend on props they are not goning to use.
+// only take props which we are going to use.
+
+// 5. Dependency Inversion

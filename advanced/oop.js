@@ -1,19 +1,40 @@
+// oop:
+// Manages complex data by grouping related objects and operations together.
+// Dog has color, weight and tail and he can bark, eat and sleep. 
 
-// Constructor Fnunction
+// Class:
+// Each class contains properties that describe the object, methods which are functions in particular class.
+// blueprint for object.
+
+// Object:
+// derived from class. Entity that encapsulates data and behavior.
+
+// Inheritance:
+// Passing down methods and properties from one class to another. This allows objects and classes to share similar behaviours.
+
+// Abstraction: 
+// Hiding details from the user in order to simplify complex operations or processes.
+
+// Encapsulation: 
+// Wrapping data and code related to it into a single unit. This helps to protect the data from accidental modification and keeps it secure.
+
+// Polymorphism:
+// Can take more than one form. 
+
+// Constructor Fnunction 
 function Elf({ name, weapon }) {
   this.name = name;
   this.weapon = weapon;
 }
 
 Elf.prototype.attack = function () {
-  return `${this.name} ekf attacks with ${this.weapon}`;
+  return `${this.name} elf attacks with ${this.weapon}`;
 }
 
 const sam = new Elf({ name: "Sam", weapon: 'Bow' });
 console.log(sam.name);
 console.log(sam.attack());
 
-// 
 // Factory Function
 function createBuilder({ name, salary }) {
   return {
@@ -45,8 +66,7 @@ function createBuilderTwo({ name, salary }) {
 const Bob2 = createBuilderTwo({ name: 'Bob', salary: 500 });
 console.log(Bob2.name);
 console.log(Bob2.getSalary());
-
-// 
+ 
 // Class
 class Character {
   constructor({ name, weapon }) {
@@ -70,7 +90,6 @@ class Wizard extends Character {
 const gandaf = new Wizard({ name: 'Ganadf', weapon: 'Sword', type: 'Grey' });
 console.log(gandaf);
 console.log(gandaf.attack());
-
 
 
 // Issues with oop:: (Focus on that it is)

@@ -77,14 +77,19 @@ bs.postMessage("Yo man");
 // 4. Color contrast and font size.
 // 5. Aria labels. 
 
+// BOM: - Browser Object Model 
+// window, history, location, navigator, and screen sizes.
 
 // How browser works::
-// Browser components => user interface, browser engine, rendering engine (networking, JS interprater).
+// Browser components => user interface, browser engine, rendering engine (networking, JS interprater), Data Prestitnce(Storage).
 // How rendering engine works => 
-// parse : prse html, css and js. DOM trees
-// render tree
-// layout
-// paint
+// parse : (Parsing code into structure taht code can use) DOM,CSOM
+    // two ypes:
+    // 1. Conventional: CSS/JS  => Vacalobary, Syntax rules => e.g:Flex, Lex
+    // 2. Un-conventional: HTML => Grammer free
+// render tree => visual elements in the order which they are going to be displayed. inline, none, block.
+// layout => calculate positions and size of elements. rectangles on screen. where they will be placed. 
+// paint => paint reandet tree elements in dom.
 
 // append VS appendChild::
 // .append() => add an element in form of a Node object or a DOMString (basically means text).

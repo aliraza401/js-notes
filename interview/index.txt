@@ -1,12 +1,16 @@
 Introduce::
 As you know already my name is Ali Raza.
-I have about 2.5 years of experience in professional development and even done some freelancing before that for about i guess 5-6 months.
-Currently i am working in convo as Software engineer - Frontend foused. My current role is to make calling app for convo like meets.
-I like working with Javscript, implementing logics, making UI designs, code optimizations, improving code structure.
+I have completed BS software Engineering with cgpa of 3.1.
+I have around 2.5 years of professioal experience development and i even done some freelancing before that for about i guess 5-6 months.
+Currently i am working in convo as Software engineer - Frontend. I am currently working on calling app for convo like google meets.
+I firmly believe in writing clean code, implementing logics, making UI designs/user experience, code optimizations, improving code structure.
 
-hows you day:
+Hows your day:
+Alhuldullah, Its going great so far.
 
-hows you week:
+How are you:
+Alhuldullah, I'm good, thanks for asking.
+
 
 Tech Stack::
     Language => Javascript, Typescript, HTML5/CSS3.
@@ -18,7 +22,7 @@ Tech Stack::
 
 Why leaving::
      My current company is going in maintainance mode means we will not be releasing new features insted working on current improvements/bug fixes.
-     I have worked here for about 1.5 year. I know i will get comfortable so i dont think i will enjoy working in maintainance mode.
+     I know i will get comfortable so i dont think i will enjoy working in maintainance mode. Plus convo currently have Wordpress projects. 
 
 Working::
      Agile/Scurm.
@@ -28,14 +32,37 @@ Working::
 Code reviews::
      Yes, firstly new dev branch is made for every feature/bug by every developer1. When code merged pr is created and reviewed by Team Lead.
 
-What do you like::
-What i like is Javscript, implementing logics, making UI designs, code optimizations, change code structure.
+conclude:
+I am excited to be a part of a team where I can continue to learn and grow as a developer while contributing to the success of the projects I work on.
+
+Work Compnies:
+1. Quellxcode: intern, worked on quellxcode.com using ReactJS.
+2. Markloops: dha2 isb,
+     a. Converted design files including Figma, XD, and PDF, to HTML/CSS. Web Designer.
+     c. Created custom shopify theme as per requirement of our organization. saved hell about of time for shopify. Inspired by Impulse(paid).
+     b. Worked as MERN stack pplicaitons. one app like mixure of reddit and medium named famedoes. secondly i worked on app named dialboxx.pk coordinated with client to create complete UI/UX.
+3. Septem systems: jail road, Lahore, (VueJS, NUXT-JS)
+     a. worked on 2 apps one KPK procution system(Vue/Laravel) and second AudioPlaygound(app like soundcluod, NuxtJS).
+4. Convo: 1-10/3 isb, ReactJS, AngularJS(1.6), NextJS.
+     a. I worked on convo app as well as with conov clinets link Zoovu, Ziphomes and Insure123.
+     b. Started with TEPS(paksitan online table test for medical) admin dashboard.
+     c. Worked on convo multiple features. (Unified Chat, Forward Chat, File Out Of Note, Calling) and bug fixing.
+     b. Worked with zoovu for their internal design system like MUI.
+     e. Worked With admin panel integration for ziphomes as well as making apis for backend.(Node, Sequlize)
+     f. Currently working on Quotation Management system for insure123 client.
 
 Project:: (role, tech, features)
 My farioute one is Audio Playgound. It was like copy of sound-cloud with some social features. payment, subscrition.
 Agile/Scurm.
 story points features at start of sprint.
-1 front-end 2 back-end. Project lead(CTO) and one QA guy.
 
-conclude:
-I am excited to be a part of a team where I can continue to learn and grow as a developer while contributing to the success of the projects I work on.
+Strengths:
+I am agile. I can quicly learn new things/concepts.
+
+weeknesses: 
+I get bored if going same/non-logical work for long period of time. 
+
+Handle pressure:
+I am engineer. I numbers/probability guy.By evaluating the available options and their pros and cons. I go with most resonable option.
+But sometime this don't work sometime you might have to listen to your heart after all this ability makes us human.
+

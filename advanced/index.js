@@ -95,6 +95,7 @@ const deepPerson2 = { ...person };
 deepPerson2.job.title = 'Soldier'; // Changes property of original object.
 const deepPerson3 = JSON.parse(JSON.stringify(person)); // works for nested objects but mess-up methods.
 // _.deepClone(person); // Use this lodash method for proper deep cloning.
+structuredClone();
 
 // Event life-cycle:: bubbling and event capturing: (first capture then bubble)
 // process of propagating from the closest element to the farthest away element in the DOM is called event bubbling.

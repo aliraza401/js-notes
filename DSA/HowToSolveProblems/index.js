@@ -11,7 +11,7 @@
 3. What is the most important value of the problem?
 4. Don't be annoying and ask too many questions.
 5. Start with the naive/brute force approach.
-6. Tell them why this approach is not the best (i.e. O(n^2) or higher, not readable, etc...)
+6. Tell them why this approach is not the best (i.e. O(n^2) or higher, not readable, etc...).
 7. Walk through your approach, comment things and see where you may be able to break things.
 8. Before you start coding, walk through your code and write down the steps you are going to follow.
 9. Modularize your code from the very beginning.

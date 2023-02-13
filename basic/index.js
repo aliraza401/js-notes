@@ -33,11 +33,10 @@ var sum = (a, b) => a + b;                  // function
 // All Yearly Additions (2016, 2017, 2018, 2019, 2020)
 
 // Spread/Rest::
-// spread array or object to single items.
 console.log(...[1, 2, 3, 4]);
 // rest is use to get rest of parameters.
 
-// Main Features in VS6:
+// Main Features in ES6:
 // let, const, arrow functions, promise, De-structuring.
 
 // var vs let vs const:: 
@@ -85,6 +84,9 @@ const abc = function () { }
 
 // Anonymous Functions:: (function without name)
 // function() {} 
+
+// Arrow Function:
+// ()=>{};
 
 // Named function expression::
 let def = function abc() { }  //abc() is only accessible in b.
