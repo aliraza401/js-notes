@@ -1,7 +1,7 @@
 // Web workers:
 // additional thread in javascript to run parallel with main thread to offload heavy computational work.(no DOM manipulation).
 // new Worker() to create worker and onmessage to send events between main thread and worker thread.
-const worker = new Worker('worker.js');
+const worker = new Worker("worker.js");
 
 // Web socket: WS protocol
 // full-duplex, TCP/IP, two way connection is established after a handshake.
@@ -15,7 +15,7 @@ const worker = new Worker('worker.js');
 // Broadcast API:
 // communication between tabs and windows.
 const bc = new BroadcastChannel("MsgTabSync");
-bc.addEventListner("message", e => console.log(e));
+bc.addEventListner("message", (e) => console.log(e));
 bs.postMessage("Yo man");
 
 // SSL:
@@ -59,14 +59,17 @@ bs.postMessage("Yo man");
 // entry, output, pulgins, rules.
 
 // Git::
-// distributed, version control system, share and track code among developers. 
+// distributed, version control system, share and track code among developers.
 
 // Shadow DOM::
 // The Shadow DOM is a browser technology designed primarily for scoping variables and CSS in web components.
 
-// Internationalization:: (i18n)
-// Adapting of a web site or web application to different languages, regional differences, and technical requirements 
-// for different regions and countries.
+// Internationalization (often abbreviated as i18n)
+// process of designing and developing software to support multiple languages and cultural conventions.
+
+// Localization
+// (often abbreviated as l10n) refers to the process of adapting software to meet the specific language and cultural requirements of a particular country or region.
+
 
 // Asseciability::
 // Making sites useable for as much users possible.
@@ -75,27 +78,27 @@ bs.postMessage("Yo man");
 // 2. alt image text.
 // 3. Design usable focus states.
 // 4. Color contrast and font size.
-// 5. Aria labels. 
+// 5. Aria labels.
 
-// BOM: - Browser Object Model 
+// BOM: - Browser Object Model
 // window, history, location, navigator, and screen sizes.
 
 // How browser works::
 // Browser components => user interface, browser engine, rendering engine (networking, JS interprater), Data Prestitnce(Storage).
-// How rendering engine works => 
+// How rendering engine works =>
 // parse : (Parsing code into structure taht code can use) DOM,CSOM
-    // two ypes:
-    // 1. Conventional: CSS/JS  => Vacalobary, Syntax rules => e.g:Flex, Lex
-    // 2. Un-conventional: HTML => Grammer free
+// two ypes:
+// 1. Conventional: CSS/JS  => Vacalobary, Syntax rules => e.g:Flex, Lex
+// 2. Un-conventional: HTML => Grammer free
 // render tree => visual elements in the order which they are going to be displayed. inline, none, block.
-// layout => calculate positions and size of elements. rectangles on screen. where they will be placed. 
+// layout => calculate positions and size of elements. rectangles on screen. where they will be placed.
 // paint => paint reandet tree elements in dom.
 
 // append VS appendChild::
 // .append() => add an element in form of a Node object or a DOMString (basically means text).
 // .appendChild() => appeds only node elements not strings.
-const parent = document.createElement('div');
-parent.appendChild('Appending Text');  // Cause error in appendChild().
+const parent = document.createElement("div");
+parent.appendChild("Appending Text"); // Cause error in appendChild().
 
 // CORS::
 

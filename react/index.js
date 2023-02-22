@@ -307,9 +307,12 @@ const WithUser = withUser(User, '123');
 
 
 
-
-
-
-
-
-
+// debouncing:
+function useDebounce(value, delay) {
+    const [debouncedValue, setDebounceValue] = React.useState(null);
+    React.useEffect(()=>{
+        const timeOut = setTimeout(()=> setDebounceValue(value),delay);
+        return () => clearTimeout(timeOut);
+    },[]);
+    return debouncedValue;
+}
